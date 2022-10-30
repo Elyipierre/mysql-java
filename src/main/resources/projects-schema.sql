@@ -43,6 +43,6 @@ CREATE TABLE material (
   material_name VARCHAR(128) NOT NULL,
   num_required int,
   cost DECIMAL(7,2),
-  PRIMARY KEY (material_id)
+  PRIMARY KEY (material_id),
+  FOREIGN KEY (project_id) REFERENCES project (project_id) ON DELETE CASCADE
 );
-show TABLES;
